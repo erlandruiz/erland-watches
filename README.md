@@ -49,18 +49,18 @@ Al confirmar la compra, la aplicación valida los datos del comprador, ejecuta u
 erland-watches/
 │
 ├── css/
-│   └── styles.css
+│   └── style.css
 │
 ├── data/
-│   └── productos.json
+│   └── products.json
 │
 ├── img/
-│   ├── classic-gold.webp
-│   ├── urban-black.webp
-│   ├── silver-executive.webp
-│   ├── sport-chrono.webp
-│   ├── brown-heritage.webp
-│   └── midnight-steel.webp
+│   ├── classic-gold.png
+│   ├── urban-black.png
+│   ├── silver-executive.png
+│   ├── sport-chrono.png
+│   ├── brown-heritage.png
+│   └── midnight-steel.png
 │
 ├── js/
 │   └── app.js
@@ -83,15 +83,15 @@ También es posible ejecutar el proyecto localmente:
 3. Ejecutar `index.html` mediante la extensión Live Server.
 4. Abrir en el navegador la dirección proporcionada por Live Server.
 
-El proyecto debe ejecutarse mediante un servidor local para que la solicitud `Fetch` pueda leer correctamente el archivo `data/productos.json`.
+El proyecto debe ejecutarse mediante un servidor local para que la solicitud `Fetch` pueda leer correctamente el archivo `data/products.json`.
 
 
 ### Descripción de los archivos
 
 * `index.html`: contiene la estructura principal de la aplicación, el catálogo, el carrito y el formulario de compra.
-* `css/styles.css`: contiene los estilos generales, el diseño responsive, las tarjetas, el carrito, el formulario y el ticket.
+* `css/style.css`: contiene los estilos generales, el diseño responsive, las tarjetas, el carrito, el formulario y el ticket.
 * `js/app.js`: contiene la lógica de productos, filtros, carrito, validaciones, temporizador, almacenamiento local y generación del ticket.
-* `data/productos.json`: almacena la información de los relojes que se obtiene mediante Fetch.
+* `data/products.json`: almacena la información de los relojes que se obtiene mediante Fetch.
 * `img/`: contiene las imágenes utilizadas en las tarjetas de los productos.
 * `README.md`: contiene la documentación general del proyecto.
 
@@ -99,7 +99,7 @@ El proyecto debe ejecutarse mediante un servidor local para que la solicitud `Fe
 
 El código fuente del proyecto se encuentra disponible en GitHub:
 
-**Repositorio:** [Ver código de Erland Watches](URL-DEL-REPOSITORIO)
+**Repositorio:** [Ver código de Erland Watches](https://github.com/erlandruiz/erland-watches)
 
 
 ## Proceso comercial simulado
