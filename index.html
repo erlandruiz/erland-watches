@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erland Watches | Tienda de relojes</title>
+    <!-- Estilos de Toastify / Toastify styles -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="#inicio" class="brand"> Erland Watches </a>
+
+      <nav class="main-navigation" aria-label="Navegacion principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Relojes</a>
+        <button
+          id="open-cart-button"
+          class="cart-button"
+          type="button"
+          aria-label="Abrir carrito de compras"
+        >
+          Carrito
+          <span id="cart-count">0</span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+          <p class="hero-label">Elegancia en cada segundo</p>
+          <h1>Encuentra el reloj perfecto para tu estilo</h1>
+
+          <p>
+            Explora nuestra selección de relojes clásicos, deportivos y
+            modernos.
+          </p>
+          <a href="#productos" class="hero-button">Ver colección</a>
+        </div>
+      </section>
+
+      <section id="products" class="products-section">
+        <div class="section-heading">
+          <p>Nuestra coleccion</p>
+          <h2>Relojes disponibles</h2>
+        </div>
+        <!-- Controles del catálogo / Catalog controls -->
+        <div class="catalog-controls">
+          <div class="search-group">
+            <label for="product-search"> Buscar reloj </label>
+
+            <input
+              id="product-search"
+              class="product-search"
+              type="search"
+              placeholder="Buscar por nombre o descripción"
+              autocomplete="off"
+            />
+          </div>
+
+          <div
+            class="category-filters"
+            aria-label="Filtrar relojes por categoría"
+          >
+            <button
+              class="category-filter is-active"
+              type="button"
+              data-category="todos"
+            >
+              Todos
+            </button>
+
+            <button
+              class="category-filter"
+              type="button"
+              data-category="clasico"
+            >
+              Clásicos
+            </button>
+
+            <button
+              class="category-filter"
+              type="button"
+              data-category="moderno"
+            >
+              Modernos
+            </button>
+
+            <button
+              class="category-filter"
+              type="button"
+              data-category="elegante"
+            >
+              Elegantes
+            </button>
+
+            <button
+              class="category-filter"
+              type="button"
+              data-category="deportivo"
+            >
+              Deportivos
+            </button>
+          </div>
+        </div>
+
+        <p id="catalog-results" class="catalog-results" aria-live="polite"></p>
+
+        <div id="product-list" class="product-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <!-- Fondo oscuro del carrito  -->
+    <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
+
+    <!-- Parte lateral del carrito -->
+    <aside
+      id="cart-panel"
+      class="cart-panel"
+      aria-labelledby="cart-title"
+      aria-hidden="true"
+    >
+      <div class="cart-header">
+        <h2 id="cart-title">Tu carrito</h2>
+        <button
+          id="close-cart-button"
+          class="close-cart-button"
+          type="button"
+          aria-label="Cerrar carrito"
+        >
+          &times;
+        </button>
+      </div>
+      <div id="cart-items" class="cart-items">
+        <p id="empty-cart-message" class="empty-cart-message">
+          Tu carrito está vacío.
+        </p>
+      </div>
+      <div class="cart-summary">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cart-total-price">S/ 0.00</strong>
+        </div>
+        <button
+          id="checkout-button"
+          class="checkout-button"
+          type="button"
+          disabled
+        >
+          Continuar con la compra
+        </button>
+      </div>
+    </aside>
+
+    <!-- fondo oscuro del formulario  -->
+    <div
+      id="checkout-overlay"
+      class="checkout-overlay"
+      aria-hidden="true"
+    ></div>
+
+    <!-- formulario de compra -->
+    <section
+      id="checkout-modal"
+      class="checkout-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="checkout-title"
+      aria-hidden="true"
+    >
+      <div class="checkout-header">
+        <div>
+          <p class="checkout-label">Finalizar pedido</p>
+          <h2 id="checkout-title">Datos del comprador</h2>
+        </div>
+
+        <button
+          id="close-checkout-button"
+          class="close-checkout-button"
+          type="button"
+          aria-label="Cerrar formulario de compra"
+        >
+          &times;
+        </button>
+      </div>
+
+      <form id="checkout-form" class="checkout-form">
+        <div class="form-group">
+          <label for="customer-name"> Nombre completo </label>
+
+          <input
+            id="customer-name"
+            name="customerName"
+            type="text"
+            placeholder="Ejemplo: Piero Sabat"
+            autocomplete="name"
+            required
+          />
+
+          <small class="form-help">
+            Ingresa el nombre que aparecerá en el ticket.
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="customer-email"> Correo electrónico </label>
+
+          <input
+            id="customer-email"
+            name="customerEmail"
+            type="email"
+            placeholder="correo@ejemplo.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="customer-document"> Número de documento </label>
+
+          <input
+            id="customer-document"
+            name="customerDocument"
+            type="text"
+            inputmode="numeric"
+            placeholder="Ejemplo: 12345678"
+            minlength="8"
+            maxlength="12"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="customer-address"> Dirección de entrega </label>
+
+          <input
+            id="customer-address"
+            name="customerAddress"
+            type="text"
+            placeholder="Calle, número y ciudad"
+            autocomplete="street-address"
+            required
+          />
+        </div>
+
+        <div class="checkout-order-summary">
+          <span>Total a pagar</span>
+
+          <strong id="checkout-total-price"> S/ 0.00 </strong>
+        </div>
+
+        <div
+          id="checkout-message"
+          class="checkout-message"
+          aria-live="polite"
+        ></div>
+
+        <button
+          id="confirm-purchase-button"
+          class="confirm-purchase-button"
+          type="submit"
+        >
+          Confirmar compra
+        </button>
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Erland Watches. Proyecto educativo desarrollado con
+        JavaScript.
+      </p>
+    </footer>
+    <!-- Librería Toastify / Toastify library -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- JavaScript principal / Main JavaScript -->
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nombre": "Classic Gold",
+    "marca": "Erland Watches",
+    "categoria": "clasico",
+    "precio": 349.9,
+    "stock": 8,
+    "imagen": "../img/classic-gold.png",
+    "descripcion": "Reloj clásico con acabado dorado y correa de cuero."
+  },
+  {
+    "id": 2,
+    "nombre": "Urban Black",
+    "marca": "Erland Watches",
+    "categoria": "moderno",
+    "precio": 429.9,
+    "stock": 5,
+    "imagen": "../img/urban-black.png",
+    "descripcion": "Reloj moderno de color negro con diseño minimalista."
+  },
+  {
+    "id": 3,
+    "nombre": "Silver Executive",
+    "marca": "Erland Watches",
+    "categoria": "elegante",
+    "precio": 519.9,
+    "stock": 6,
+    "imagen": "./img/silver-executive.png",
+    "descripcion": "Reloj elegante de acero inoxidable para ocasiones especiales."
+  },
+  {
+    "id": 4,
+    "nombre": "Sport Chrono",
+    "marca": "Erland Watches",
+    "categoria": "deportivo",
+    "precio": 459.9,
+    "stock": 10,
+    "imagen": "./img/sport-chrono.png",
+    "descripcion": "Reloj deportivo con cronógrafo y diseño resistente."
+  },
+  {
+    "id": 5,
+    "nombre": "Brown Heritage",
+    "marca": "Erland Watches",
+    "categoria": "clasico",
+    "precio": 389.9,
+    "stock": 7,
+    "imagen": "./img/brown-heritage.png",
+    "descripcion": "Reloj tradicional con correa marrón y estilo atemporal."
+  },
+  {
+    "id": 6,
+    "nombre": "Midnight Steel",
+    "marca": "Erland Watches",
+    "categoria": "moderno",
+    "precio": 579.9,
+    "stock": 4,
+    "imagen": "./img/midnight-steel.png",
+    "descripcion": "Reloj de acero oscuro con acabado moderno y sofisticado."
+  }
+]
